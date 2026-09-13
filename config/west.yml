@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: splitkb
       url-base: https://github.com/splitkb
+    - name: joan-aluja-oraa
+      url-base: https://github.com/joan-aluja-oraa
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -10,7 +12,7 @@ manifest:
       revision: main+halcyon-fixes
       import: app/west.yml
     - name: zmk-halcyon-module
-      remote: splitkb
-      revision: main
+      remote: joan-aluja-oraa
+      revision: af4cf7a04263ad2179f798a3c82ea1b1d3cdcaa8
   self:
     path: config

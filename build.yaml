@@ -16,3 +16,22 @@
 #     shield: halcyon_kyria_right mod_battery_coincell mod_encoder_right
 #
 ---
+include:
+  - board: halcyon_dongle//zmk
+    shield: halcyon_kyria_dongle
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart
+    artifact-name: halcyon_kyria_dongle
+  - board: halcyon_wireless//zmk
+    shield: halcyon_kyria_left mod_battery_coincell mod_display_epaper_forest
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_HALCYON_EPAPER_ART_HIMMEL=y
+    snippet: studio-rpc-usb-uart
+    artifact-name: halcyon_kyria_left_central
+  - board: halcyon_wireless//zmk
+    shield: halcyon_kyria_left mod_battery_coincell mod_display_epaper_forest
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_HALCYON_EPAPER_ART_HIMMEL=y
+    artifact-name: halcyon_kyria_left_peripheral
+  - board: halcyon_wireless//zmk
+    shield: halcyon_kyria_right mod_battery_coincell mod_display_epaper_mountain
+    cmake-args: -DCONFIG_HALCYON_EPAPER_ART_FRIEREN=y
+    artifact-name: halcyon_kyria_right
